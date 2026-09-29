@@ -196,6 +196,7 @@ function saveAndBroadcast() {
             [`teams.${state.currentTeamName}`]: state.teams[state.currentTeamName]
         });
     }
+    render();
 }
         const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
         function playSound(type) {
