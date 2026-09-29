@@ -105,6 +105,9 @@
     </footer>
 
     <script type="module">
+        window.playSound = function (type) {
+  // Keeps every button working even if sound is unavailable.
+};
         import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
 import { getFirestore, doc, onSnapshot, setDoc, updateDoc } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
 
