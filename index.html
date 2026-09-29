@@ -104,10 +104,8 @@
         MINEDEX Stock Exchange 2.0 &bull; E-Cell Entrepreneurship Event &bull; Day 2 Simulation
     </footer>
 
-    <script>
-        window.playSound = function (type) {
-  // Keeps every button working even if sound is unavailable.
-};
+    <script type="module">
+    
         import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
 import { getFirestore, doc, onSnapshot, setDoc, updateDoc } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
 
@@ -1015,7 +1013,24 @@ setInterval(() => {
             saveAndBroadcast();
             window.scrollTo(0, 0);
         }
-
+        Object.assign(window, {
+  playSound,
+  switchView,
+  handleTraderLoginSubmit,
+  handleAdminLoginSubmit,
+  handleBuy,
+  handleSell,
+  handleLeave,
+  handleAdminExit,
+  setRound,
+  toggleTimer,
+  resetTimer,
+  handleBroadcastNews,
+  triggerRandomChaos,
+  onAdminSliderInput,
+  setSliderPreset,
+  applyAdminPriceChange
+});
         window.onload = function() {
             render();
         };
